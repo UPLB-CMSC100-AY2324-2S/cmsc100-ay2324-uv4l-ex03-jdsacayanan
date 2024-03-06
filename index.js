@@ -67,4 +67,13 @@ function reversePassword(input) {
     return reversed;
 }
 
-console.log(reversePassword("12345"));
+function storeToObject(givenName, firstInput, secondInput) {
+    person = {
+        name: givenName,
+        password: firstInput
+    }
+    if(validatePassword(firstInput, secondInput)) {
+        person.password = reversePassword(firstInput);
+    }
+    return person;
+}
