@@ -51,5 +51,20 @@ function validatePassword(firstInput, secondInput) {
     return true;
 }
 
-check = validatePassword("HELLO1234", "HELLO1234") ;
-console.log(check);
+function reversePassword(input) {
+    // ensure that the variable is a string
+    input = String(input);
+
+    // a variable to store the reversed password
+    reversed = "";
+    
+    // loop through all the characters of the password
+    for (let i=(input.length-1); i>=0; i--) {
+        reversed = reversed+input[i];
+    }
+
+    // return reversed password
+    return reversed;
+}
+
+console.log(reversePassword("12345"));
